@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<GraphXmlObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Vertex>
+    <VertexXmlObject Id="1" X="213" Y="78" />
+    <VertexXmlObject Id="2" X="1189" Y="241" />
+    <VertexXmlObject Id="3" X="136" Y="703" />
+    <VertexXmlObject Id="4" X="65" Y="248" />
+    <VertexXmlObject Id="5" X="122" Y="45" />
+    <VertexXmlObject Id="6" X="899" Y="343" />
+    <VertexXmlObject Id="7" X="277" Y="316" />
+    <VertexXmlObject Id="8" X="404" Y="601" />
+    <VertexXmlObject Id="9" X="1292" Y="582" />
+    <VertexXmlObject Id="10" X="857" Y="105" />
+  </Vertex>
+  <Edge>
+    <EdgeXmlObject VertexId1="1" VertexId2="6" Cost="1" />
+    <EdgeXmlObject VertexId1="1" VertexId2="2" Cost="4" />
+    <EdgeXmlObject VertexId1="1" VertexId2="3" Cost="4" />
+    <EdgeXmlObject VertexId1="1" VertexId2="5" Cost="1" />
+    <EdgeXmlObject VertexId1="1" VertexId2="4" Cost="5" />
+    <EdgeXmlObject VertexId1="1" VertexId2="7" Cost="8" />
+    <EdgeXmlObject VertexId1="1" VertexId2="9" Cost="8" />
+    <EdgeXmlObject VertexId1="1" VertexId2="8" Cost="1" />
+    <EdgeXmlObject VertexId1="2" VertexId2="6" Cost="5" />
+    <EdgeXmlObject VertexId1="2" VertexId2="7" Cost="6" />
+    <EdgeXmlObject VertexId1="3" VertexId2="4" Cost="2" />
+    <EdgeXmlObject VertexId1="3" VertexId2="7" Cost="7" />
+    <EdgeXmlObject VertexId1="3" VertexId2="10" Cost="5" />
+    <EdgeXmlObject VertexId1="3" VertexId2="8" Cost="3" />
+    <EdgeXmlObject VertexId1="3" VertexId2="5" Cost="9" />
+    <EdgeXmlObject VertexId1="3" VertexId2="6" Cost="4" />
+    <EdgeXmlObject VertexId1="3" VertexId2="9" Cost="8" />
+    <EdgeXmlObject VertexId1="4" VertexId2="5" Cost="2" />
+    <EdgeXmlObject VertexId1="4" VertexId2="6" Cost="8" />
+    <EdgeXmlObject VertexId1="4" VertexId2="7" Cost="8" />
+    <EdgeXmlObject VertexId1="4" VertexId2="8" Cost="2" />
+    <EdgeXmlObject VertexId1="4" VertexId2="9" Cost="8" />
+    <EdgeXmlObject VertexId1="4" VertexId2="10" Cost="7" />
+    <EdgeXmlObject VertexId1="5" VertexId2="6" Cost="2" />
+    <EdgeXmlObject VertexId1="5" VertexId2="7" Cost="5" />
+    <EdgeXmlObject VertexId1="6" VertexId2="9" Cost="6" />
+    <EdgeXmlObject VertexId1="6" VertexId2="7" Cost="4" />
+    <EdgeXmlObject VertexId1="6" VertexId2="10" Cost="3" />
+    <EdgeXmlObject VertexId1="7" VertexId2="9" Cost="6" />
+    <EdgeXmlObject VertexId1="8" VertexId2="9" Cost="3" />
+  </Edge>
+</GraphXmlObject>
