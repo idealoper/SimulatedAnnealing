@@ -45,7 +45,7 @@ namespace WindowsFormsApplication1
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-		
+			SimulatedAnnealing.Run(graph, () => Invoke(new Action(UpdateGraphics)), panel1.Size);
 		}
 
 		private void LoadFromFile(string fileName)
@@ -68,12 +68,18 @@ namespace WindowsFormsApplication1
 
 		private void UpdateGraph(Graph graph)
 		{
-			listBox1.Items.Clear();
-
 			this.graph = graph;
 
+			UpdateGraphics();
+		}
+
+
+		private void UpdateGraphics()
+		{
+			listBox1.Items.Clear();
 			UpdateGraphGraphics();
 			UpdateLengthesListBox();
+			Refresh();
 		}
 
 		private void UpdateLengthesListBox()
@@ -145,12 +151,20 @@ namespace WindowsFormsApplication1
 			return new Point(x, y);
 		}
 
+
 		private void OnPaint(object sender, PaintEventArgs e)
 		{
 			if (graphicEdges != null && graphicVertexes != null)
 			{
 				graphicEdges.ForEach(x => x.Draw(e.Graphics));
 				graphicVertexes.ForEach(x => x.Draw(e.Graphics));
+			}
+
+			temperatureTextBox.Visible = SimulatedAnnealing.IsRun;
+			var tempText = SimulatedAnnealing.Temperature.ToString("F2") + "º";
+			if (temperatureTextBox.Text != tempText)
+			{
+				temperatureTextBox.Text = tempText;
 			}
 		}
 
@@ -182,8 +196,8 @@ namespace WindowsFormsApplication1
 							}
 						}
 						var cost = rand.Next(1, 10);
-						vertex.Edges.Add(new Edge(res[index], cost));
-						res[index].Edges.Add(new Edge(vertex, cost));
+						vertex.Edges.Add(new Edge(vertex, res[index], cost));
+						res[index].Edges.Add(new Edge(res[index], vertex, cost));
 					}
 				}
 			}
@@ -276,10 +290,7 @@ namespace WindowsFormsApplication1
 		}
 	}
 
-	static class GLOBAL_PARAMETERS
-	{
-		public static bool WhetherShowWeight { get; set; }
-	}
+	
 
 	interface IGraphicObject
 	{

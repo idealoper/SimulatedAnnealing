@@ -42,6 +42,8 @@
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.showWeightMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.temperatureTextBox = new System.Windows.Forms.TextBox();
+			this.panel1.SuspendLayout();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -72,6 +74,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.panel1.Controls.Add(this.temperatureTextBox);
 			this.panel1.Location = new System.Drawing.Point(139, 35);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(490, 410);
@@ -161,6 +164,15 @@
 			this.showWeightMenuItem.Text = "Show weight";
 			this.showWeightMenuItem.Click += new System.EventHandler(this.showWeightMenuItem_Click);
 			// 
+			// temperatureTextBox
+			// 
+			this.temperatureTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.temperatureTextBox.Location = new System.Drawing.Point(325, 3);
+			this.temperatureTextBox.Name = "temperatureTextBox";
+			this.temperatureTextBox.ReadOnly = true;
+			this.temperatureTextBox.Size = new System.Drawing.Size(160, 20);
+			this.temperatureTextBox.TabIndex = 0;
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,6 +185,8 @@
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "Form1";
 			this.Text = "Form1";
+			this.panel1.ResumeLayout(false);
+			this.panel1.PerformLayout();
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			this.ResumeLayout(false);
@@ -196,6 +210,7 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
 		private System.Windows.Forms.ToolStripMenuItem exitMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem showWeightMenuItem;
+		private System.Windows.Forms.TextBox temperatureTextBox;
 	}
 }
 

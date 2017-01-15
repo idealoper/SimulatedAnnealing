@@ -44,8 +44,8 @@ namespace WindowsFormsApplication1
 			{
 				var vertex1 = result.First(x => x.Id == edgeXmlObject.VertexId1);
 				var vertex2 = result.First(x => x.Id == edgeXmlObject.VertexId2);
-				vertex1.Edges.Add(new Edge(vertex2, edgeXmlObject.Cost));
-				vertex2.Edges.Add(new Edge(vertex1, edgeXmlObject.Cost));
+				vertex1.Edges.Add(new Edge(vertex1, vertex2, edgeXmlObject.Cost));
+				vertex2.Edges.Add(new Edge(vertex2, vertex1, edgeXmlObject.Cost));
 			}
 
 			return result;
